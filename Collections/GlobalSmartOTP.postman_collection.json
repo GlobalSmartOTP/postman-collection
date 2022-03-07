@@ -1,0 +1,366 @@
+{
+	"info": {
+		"_postman_id": "fe689246-2cf0-4bbc-8bec-e73b9c15892a",
+		"name": "GlobalSmartOTP",
+		"description": "![gsOTP](https://raw.githubusercontent.com/GlobalSmartOTP/php-lib/main/examples/assets/logo.png)\n\n# GlobalSmartOTP Postman collection\n\nA postman collection for the GlobalSmartOTP API.\n\n[Official website](https://gsotp.com)\n\n[Documents](https://gsotp.com/doc)\n\n----\n![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)\nA PHP SDK for the GlobalSmartOTP API. [github repo](https://github.com/GlobalSmartOTP/php-lib)\n----\n![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white)\nA Golang SDK for the GlobalSmartOTP API. [github repo](https://github.com/GlobalSmartOTP/go-lib)\n----\n![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)\nA NodeJS SDK for the GlobalSmartOTP API. [github repo](https://github.com/GlobalSmartOTP/nodejs-lib)\n----",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "examples",
+			"item": [
+				{
+					"name": "Send by SMS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "Get apiKey from: https://gsotp.com/dashboard/projects",
+								"key": "apiKey",
+								"type": "text",
+								"value": "{{apiKey}}"
+							},
+							{
+								"description": "fa,en",
+								"key": "accept-language",
+								"type": "text",
+								"value": "{{accept-language}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mobile\": \"\",\n    \"method\": \"sms\",\n    \"templateID\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/otp/send",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"otp",
+								"send"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send by SMS with params",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "Get apiKey from: https://gsotp.com/dashboard/projects",
+								"key": "apiKey",
+								"type": "text",
+								"value": "{{apiKey}}"
+							},
+							{
+								"description": "fa,en",
+								"key": "accept-language",
+								"type": "text",
+								"value": "{{accept-language}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mobile\": \"\",\n    \"method\": \"sms\",\n    \"templateID\": 6,\n    \"param1\": \"value_1\",\n    \"param2\": \"value_2\",\n    \"param3\": \"value_3\",\n    \"param4\": \"value_4\",\n    \"param5\": \"value_5\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/otp/send",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"otp",
+								"send"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send custom OTP code",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "Get apiKey from: https://gsotp.com/dashboard/projects",
+								"key": "apiKey",
+								"type": "text",
+								"value": "{{apiKey}}"
+							},
+							{
+								"description": "fa,en",
+								"key": "accept-language",
+								"type": "text",
+								"value": "{{accept-language}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mobile\": \"\",\n    \"method\": \"sms\",\n    \"templateID\": 3,\n    \"code\": \"123456\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/otp/send",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"otp",
+								"send"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send by IVR",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "Get apiKey from: https://gsotp.com/dashboard/projects",
+								"key": "apiKey",
+								"type": "text",
+								"value": "{{apiKey}}"
+							},
+							{
+								"description": "fa,en",
+								"key": "accept-language",
+								"type": "text",
+								"value": "{{accept-language}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mobile\": \"\",\n    \"method\": \"ivr\",\n    \"templateID\": 2\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/otp/send",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"otp",
+								"send"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send by Messenger",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "Get apiKey from: https://gsotp.com/dashboard/projects",
+								"key": "apiKey",
+								"type": "text",
+								"value": "{{apiKey}}"
+							},
+							{
+								"description": "fa,en",
+								"key": "accept-language",
+								"type": "text",
+								"value": "{{accept-language}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mobile\": \"\",\n    \"method\": \"messenger\",\n    \"templateID\": 3\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/otp/send",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"otp",
+								"send"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "![gsOTP](https://raw.githubusercontent.com/GlobalSmartOTP/php-lib/main/examples/assets/logo.png)\n"
+		},
+		{
+			"name": "Send",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"description": "Get apiKey from: https://gsotp.com/dashboard/projects",
+						"key": "apiKey",
+						"type": "text",
+						"value": "{{apiKey}}"
+					},
+					{
+						"description": "fa,en",
+						"key": "accept-language",
+						"type": "text",
+						"value": "{{accept-language}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mobile\": \"\",\n    \"method\": \"\",\n    \"templateID\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/otp/send",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"otp",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "apiKey",
+						"value": "{{apiKey}}",
+						"type": "text"
+					},
+					{
+						"key": "accept-language",
+						"value": "{{accept-language}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mobile\": \"\",\n    \"OTP\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/otp/verify",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"otp",
+						"verify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Status",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "apiKey",
+						"value": "{{apiKey}}",
+						"type": "text"
+					},
+					{
+						"key": "accept-language",
+						"value": "{{accept-language}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"OTPReferenceID\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/otp/status",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"otp",
+						"status"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "https://api.gsotp.com"
+		},
+		{
+			"key": "apiKey",
+			"value": ""
+		},
+		{
+			"key": "accept-language",
+			"value": "fa"
+		}
+	]
+}
