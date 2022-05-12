@@ -1,3 +1,12 @@
+# DEPRECATED! Please check [MessageWay](https://github.com/MessageWay/PostmanCollection)
+
+![DEPRECATED][ico-deprecated]
+
+[ico-deprecated]: https://img.shields.io/badge/-DEPRECATED-red?style=for-the-badge
+
+
+----
+
 ![](Images/logo.png)
 
 # GlobalSmartOTP Postman collection
